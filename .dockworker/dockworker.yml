@@ -1,0 +1,13 @@
+dockworker:
+  version: '6'
+  application:
+    identifiers:
+      id: dockworker-baseimage
+      slug: dockworker-baseimage
+      short_slug: admin
+      uuid: 9998
+  workflows:
+    vcs:
+      type: github
+      owner: unb-libraries
+      name: dockworker-baseimage
