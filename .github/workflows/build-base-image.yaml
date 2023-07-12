@@ -12,6 +12,11 @@ on:
         required: false
         type: string
         default: linux/amd64,linux/arm64/v8
+      protected-tags:
+        description: 'A list of tags whose container images should be protected from deletion in cleanup. This is in addition to push-branches, which are always protected. CSV format.'
+        required: false
+        type: string
+        default: ''
     secrets:
       SLACK_WEBHOOK_URL:
         required: true
@@ -34,6 +39,7 @@ jobs:
     with:
       build-themes: false
       image-name: ${{ inputs.image-name }}
+      protected-tags: ${{ inputs.protected-tags }}
       push-branches: '["all"]'
       push-all-branches: true
       platforms: ${{ inputs.platforms }}
