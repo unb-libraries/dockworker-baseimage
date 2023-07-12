@@ -39,7 +39,7 @@ class BaseImageGitHubWorkflowFilesCommands extends DockworkerBaseImageCommands
                 "$this->applicationRoot/vendor/unb-libraries/dockworker-baseimage/data/workflows/"
             ],
             [
-                'image_name' => $this->getRequiredConfigurationItem('dockworker.image.name'),
+                'image_name' => $this->getRequiredConfigurationItem('dockworker.workflows.image.name'),
             ]
         );
         $this->dockworkerIO->say("Wrote $workflow_dir/build-image.yaml");
