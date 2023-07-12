@@ -20,6 +20,7 @@ class BaseImageGitHubRepositorySettingsCommands extends DockworkerBaseImageComma
     public function provideGitHubRepositoryTopics(): array
     {
         return [
+            'docker',
             'dockworker-baseimage',
         ];
     }
