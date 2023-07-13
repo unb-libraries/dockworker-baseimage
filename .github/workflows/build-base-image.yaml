@@ -40,7 +40,7 @@ jobs:
       build-themes: false
       image-name: ${{ inputs.image-name }}
       protected-tags: ${{ inputs.protected-tags }}
-      push-branches: '["all"]'
+      push-branches: '[]'
       push-all-branches: true
       platforms: ${{ inputs.platforms }}
     secrets:
